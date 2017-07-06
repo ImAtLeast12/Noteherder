@@ -13,9 +13,9 @@ const Sidebar=()=>{
           <a className="new-note" href="/notes">
             <img src={newHover} alt="New note"/>
             <img 
-            className="outline" 
-            src={newIcon} 
-            alt="New note"/>
+                className="outline" 
+                src={newIcon} 
+                alt="New note"/>
           </a>
           <div className="SignOut">
             <button>
