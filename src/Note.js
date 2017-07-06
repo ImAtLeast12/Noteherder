@@ -5,7 +5,6 @@ const Note = (props) =>{
             <li>
                 <div className="note">
                     <div className="note-title">
-                    Kohlrabi welsh
                     {props.note.title}
                     </div>
                     <div className="note-body">
