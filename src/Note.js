@@ -1,6 +1,7 @@
 import React from 'react'
 const Note = (props) =>{
-    const handleClick =() =>{
+    const handleClick =(ev) =>{
+        console.log(this)
         console.log('clicky clickly')
     }
     return (
