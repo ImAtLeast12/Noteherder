@@ -1,9 +1,10 @@
 import React from 'react'
+
 const Note = (props) =>{
-    const handleClick =(ev) =>{
-        console.log(this)
-        console.log('clicky clickly')
+    const handleClick = () =>{
+        props.setCurrentNote(props.note)
     }
+
     return (
         <a onClick={handleClick}>
             <li>
