@@ -19,25 +19,37 @@ class App extends Component {
       body: 'very fancy!',
     },
   },
-      currentNote:{
+      currentNote: this.blankNote(),
+    }
+  }
+
+  blankNote=()=>{
+    return{
         id: null,
         title: '',
         body: '',
-      },
     }
   }
 
   setCurrentNote = (note) => {
     this.setState({currentNote:note})
   }
+  
+  resetCurrentNote = () => {
+    this.setCurrentNote(this.blankNote())
+  }
 
   render() {
+    const actions ={
+      setCurrentNote: this.setCurrentNote,
+      resetCurrentNote: this.resetCurrentNote,
+    }
     return (
       <div className="App">
         <Main 
           notes={this.state.notes}
           currentNote={this.state.currentNote}
-          setCurrentNote={this.setCurrentNote}
+          {...actions}
           />
       </div>
     )
